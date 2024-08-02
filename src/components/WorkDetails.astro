@@ -10,12 +10,12 @@ interface Props {
   link: string;
 }
 
-const { class: className, from, to, tasks, workplace } = Astro.props;
+const { class: className, from, to, tasks, workplace, link } = Astro.props;
 ---
 
 <section class:list={[className]}>
   <h1 class="text-3xl">
-    <CLink href="https://fenicio.io/">
+    <CLink href={link}>
       {workplace}
     </CLink>
   </h1>
