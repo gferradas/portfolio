@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import TerminalLine from "@components/TerminalLine.astro";
 import ASCII from "@components/ASCII.astro";
 import Tecnologies from "@components/Tecnologies.astro";
-import Clink from "@components/CLink.astro";
+import CLink from "@components/CLink.astro";
 import WorkDetails from "@components/WorkDetails.astro";
 
 import {
@@ -28,12 +28,12 @@ import {
       <br />
       <br />
       🔭 Actualmente trabajo en
-      <Clink href={about.linkTrabajoAct}>{about.trabajoActual}</Clink>
+      <CLink href={about.linkTrabajoAct}>{about.trabajoActual}</CLink>
     </p>
     <p>
-      Recibido de Analista en Infraestructura informatica cursado en <Clink
+      Recibido de Analista en Infraestructura informatica cursado en <CLink
         href="https://fi.ort.edu.uy/analista-en-infraestructura-informatica"
-        >ORT</Clink
+        >ORT</CLink
       >
     </p>
 
@@ -70,23 +70,22 @@ import {
       class:list={"my-4"}
       command="find . -type f -name '*certification.pdf' -exec parsecert.sh {} \\"
     />
-    <Clink
-      href="https://www.credly.com/badges/38861528-d416-4579-a4b2-7b83ba1a391c/linked_in_profile"
-      >RHCSA*</Clink
-    >
-    <br />
-    <Clink
-      href="https://www.credly.com/badges/2efd35a7-6b81-4274-9970-97b38ba59ce3/linked_in_profile"
-      >AWS-SAA-3*</Clink
-    >
+
+    {
+      certificaciones.map(({ link, nombre }) => (
+        <CLink class:list={"block"} href={link}>
+          {nombre}
+        </CLink>
+      ))
+    }
 
     <TerminalLine class:list={"my-4"} command="cat contactInfo.txt" />
     <p>
       {
         formasDeContacto.map(({ link, texto }) => (
-          <Clink class:list={"block"} href={link}>
+          <CLink class:list={"block"} href={link}>
             {texto}
-          </Clink>
+          </CLink>
         ))
       }
     </p>
@@ -94,4 +93,8 @@ import {
     <!-- Final Line -->
     <TerminalLine class:list={"mt-4"} />
   </main>
+
+  <footer class="m-auto p-4 max-w-[calc(100%-2rem)] w-[1280px] leading-6">
+    page made by <CLink href="https://sebasdiaz.com">sebadio</CLink>
+  </footer>
 </Layout>
