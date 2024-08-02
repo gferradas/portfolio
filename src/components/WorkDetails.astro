@@ -1,0 +1,27 @@
+---
+import CLink from "./CLink.astro";
+
+interface Props {
+  class?: string;
+  workplace: string;
+  from: string;
+  to: string;
+  tasks: string[];
+  link: string;
+}
+
+const { class: className, from, to, tasks, workplace } = Astro.props;
+---
+
+<section class:list={[className]}>
+  <h1 class="text-3xl">
+    <CLink href="https://fenicio.io/">
+      {workplace}
+    </CLink>
+  </h1>
+  <span>{from} - {to}</span>
+  <p>Encargado de:</p>
+  <div class="flex flex-col gap-2 my-4">
+    {tasks.map((t) => <span> - {t}</span>)}
+  </div>
+</section>

@@ -1,0 +1,68 @@
+{
+  "tecnologias": [
+    ["Jenkins", "Terraform", "Zabbix"],
+    ["Kubernetes", "Docker", "AWS"],
+    ["Linux", "Python", "Git"]
+  ],
+  "about": {
+    "descripcionMia": "Soy un Devops y Analista Cloud trabajando mas que nada con AWS y Linux",
+    "trabajoActual": "Fenicio Ecommerce",
+    "linkTrabajoAct": "https://fenicio.io"
+  },
+  "lenguajes": ["Ingles", "Español"],
+  "trabajos": [
+    {
+      "workplace": "Fenicio Ecommerce",
+      "link": "https://fenicio.io/",
+      "from": "27.05.2024",
+      "to": "Actualidad",
+      "tasks": [
+        "Administracion de AWS",
+        "DevOps",
+        "DevSecOps",
+        "Control de Acceso",
+        "Administracion de Sistemas Linux"
+      ]
+    },
+    {
+      "workplace": "HG",
+      "link": "https://hg.com.uy/",
+      "from": "01.12.2022",
+      "to": "20.05.2024",
+      "tasks": [
+        "Equipo UTU",
+        "Administración Infraestructura",
+        "Mantenimiento de Base de datos",
+        "Tareas de mantenimiento sobre WebServers",
+        "Despliegue de aplicaciones"
+      ]
+    },
+    {
+      "workplace": "AT Innovando Juntos",
+      "link": "https://www.at.uy/",
+      "from": "09.20.2022",
+      "to": "24.05.2024",
+      "tasks": ["Soporte", "Administrador de Sistemas Linux"]
+    }
+  ],
+  "certificaciones": [
+    {
+      "nombre": "RHCSA",
+      "link": "https://www.credly.com/badges/38861528-d416-4579-a4b2-7b83ba1a391c/linked_in_profile"
+    },
+    {
+      "nombre": "AWS-SAA-3",
+      "link": "https://www.credly.com/badges/2efd35a7-6b81-4274-9970-97b38ba59ce3/linked_in_profile"
+    }
+  ],
+  "formasDeContacto": [
+    {
+      "link": "mailto:guillermoferr1507@gmail.com",
+      "texto": "guillermoferr1507@gmail.com"
+    },
+    {
+      "link": "https://www.linkedin.com/in/guillermo-ferradas/",
+      "texto": "LinkedIn"
+    }
+  ]
+}

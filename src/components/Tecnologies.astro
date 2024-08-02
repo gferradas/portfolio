@@ -1,0 +1,35 @@
+---
+interface Props {
+  class?: string;
+}
+import { table } from "table";
+const { class: className } = Astro.props;
+import { tecnologias } from "@data/data.json";
+
+const config = {
+  border: {
+    topBody: `-`,
+    topJoin: `+`,
+    topLeft: `+`,
+    topRight: `+`,
+
+    bottomBody: `-`,
+    bottomJoin: `+`,
+    bottomLeft: `+`,
+    bottomRight: `+`,
+
+    bodyLeft: `|`,
+    bodyRight: `|`,
+    bodyJoin: `|`,
+
+    joinBody: `-`,
+    joinLeft: `+`,
+    joinRight: `+`,
+    joinJoin: `+`,
+  },
+};
+
+const tableData: string = table(tecnologias, config);
+---
+
+<pre class:list={[className, "font-VT323"]}>{tableData}</pre>

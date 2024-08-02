@@ -1,0 +1,19 @@
+---
+interface Props {
+  command?: string;
+  class?: string;
+}
+
+const { command, class: className } = Astro.props;
+---
+
+<section class={className}>
+  <span class="text-green-400">[guille@localhost ~]#</span>
+  {
+    command ? (
+      <span>{command}</span>
+    ) : (
+      <span class="animate-pulse-fast select-none">|</span>
+    )
+  }
+</section>

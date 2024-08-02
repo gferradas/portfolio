@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TerminalLine from "@components/TerminalLine.astro";
+import ASCII from "@components/ASCII.astro";
+import Tecnologies from "@components/Tecnologies.astro";
+import Clink from "@components/CLink.astro";
+import WorkDetails from "@components/WorkDetails.astro";
+
+import {
+  about,
+  certificaciones,
+  formasDeContacto,
+  lenguajes,
+  trabajos,
+} from "@data/data.json";
+---
+
+<Layout title="guille 🐧">
+  <main
+    class="m-auto p-4 max-w-[calc(100%-2rem)] w-[1280px] text-2xl leading-6"
+  >
+    <TerminalLine command="cat guille.txt | cowsay -n" />
+    <ASCII />
+
+    <TerminalLine command="whoami" />
+    <p>
+      {about.descripcionMia}
+      <br />
+      <br />
+      🔭 Actualmente trabajo en
+      <Clink href={about.linkTrabajoAct}>{about.trabajoActual}</Clink>
+    </p>
+    <p>
+      Recibido de Analista en Infraestructura informatica cursado en <Clink
+        href="https://fi.ort.edu.uy/analista-en-infraestructura-informatica"
+        >ORT</Clink
+      >
+    </p>
+
+    <TerminalLine class:list={"mt-8"} command="cat languages.txt | known.sh" />
+    <p>
+      {lenguajes.map((l) => <span class="block">- {l}</span>)}
+    </p>
+
+    <TerminalLine
+      class:list={"my-4"}
+      command="cat work_experience.txt | prettyfy.sh"
+    />
+
+    {
+      trabajos.map(({ from, to, workplace, link, tasks }) => (
+        <WorkDetails
+          workplace={workplace}
+          from={from}
+          to={to}
+          link={link}
+          tasks={tasks}
+        />
+      ))
+    }
+
+    <TerminalLine
+      class:list={"mt-8 mb-4"}
+      command="cat tecnologias.txt | table.sh"
+    />
+    <p>🌱Tengo experiencia en las siguientes tecnologias:</p>
+    <Tecnologies />
+
+    <TerminalLine
+      class:list={"my-4"}
+      command="find . -type f -name '*certification.pdf' -exec parsecert.sh {} \\"
+    />
+    <Clink
+      href="https://www.credly.com/badges/38861528-d416-4579-a4b2-7b83ba1a391c/linked_in_profile"
+      >RHCSA*</Clink
+    >
+    <br />
+    <Clink
+      href="https://www.credly.com/badges/2efd35a7-6b81-4274-9970-97b38ba59ce3/linked_in_profile"
+      >AWS-SAA-3*</Clink
+    >
+
+    <TerminalLine class:list={"my-4"} command="cat contactInfo.txt" />
+    <p>
+      {
+        formasDeContacto.map(({ link, texto }) => (
+          <Clink class:list={"block"} href={link}>
+            {texto}
+          </Clink>
+        ))
+      }
+    </p>
+
+    <!-- Final Line -->
+    <TerminalLine class:list={"mt-4"} />
+  </main>
+</Layout>
