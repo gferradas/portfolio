@@ -7,10 +7,33 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html class="bg-[#111111] text-white font-VT323" lang="en">
+<html class="bg-[#111111] text-white font-VT323" lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta
+      name="description"
+      content="Portafolio de Guillermo Ferradas. DevOps Engineer."
+    />
+
+    <!-- Open Graph / Facebook / Discord -->
+    <meta property="og:title" content="Your Page Title" />
+    <meta
+      property="og:description"
+      content="Portafolio de Guillermo Ferradas. DevOps Engineer."
+    />
+    <meta property="og:image" content="https://example.com/preview.png" />
+    <meta property="og:url" content="https://www.gferradas.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="guille 🐧" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:title" content="guille 🐧" />
+    <meta
+      name="twitter:description"
+      content="Portafolio de Guillermo Ferradas. DevOps Engineer."
+    />
+    <meta name="twitter:image" content="https://example.com/preview.png" />
+
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
@@ -20,6 +43,11 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
+<!--
+/\_/\  
+( o.o ) 
+> ^ <
+-->
 <style is:global>
   @font-face {
     font-family: "VT323";
