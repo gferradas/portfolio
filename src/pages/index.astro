@@ -38,9 +38,15 @@ import {
     </p>
 
     <TerminalLine class:list={"mt-8"} command="cat languages.txt | known.sh" />
-    <p>
-      {lenguajes.map((l) => <span class="block">- {l}</span>)}
-    </p>
+    <div>
+      {
+        lenguajes.map((l) => (
+          <Fragment>
+            <p>- {l}</p>
+          </Fragment>
+        ))
+      }
+    </div>
 
     <TerminalLine
       class:list={"my-4"}
@@ -73,9 +79,10 @@ import {
 
     {
       certificaciones.map(({ link, nombre }) => (
-        <CLink class:list={"block"} href={link}>
-          {nombre}
-        </CLink>
+        <Fragment>
+          <CLink href={link}>{nombre}</CLink>
+          <br />
+        </Fragment>
       ))
     }
 
@@ -83,9 +90,10 @@ import {
     <p>
       {
         formasDeContacto.map(({ link, texto }) => (
-          <CLink class:list={"block"} href={link}>
-            {texto}
-          </CLink>
+          <Fragment>
+            <CLink href={link}>{texto}</CLink>
+            <br />
+          </Fragment>
         ))
       }
     </p>
