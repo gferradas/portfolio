@@ -5,12 +5,23 @@
     ["Linux", "Python", "Git"]
   ],
   "about": {
-    "descripcionMia": "Soy un DevOps y Analista Cloud con especializacion en AWS y Linux",
+    "descripcionMia": "Soy un DevOps, Analista Cloud y Profesor Adjunto con especializacion en AWS y Linux",
     "trabajoActual": "Fenicio Ecommerce",
     "linkTrabajoAct": "https://fenicio.io"
   },
   "lenguajes": ["Ingles", "Español"],
   "trabajos": [
+      {
+      "workplace": "Universdad ORT Uruguay",
+      "link": "",
+      "from": "31.10.2024",
+      "to": "Actualidad",
+      "tasks": [
+        "AWS",
+        "Git",
+        "Boto3"
+      ]
+    },
     {
       "workplace": "Fenicio Ecommerce",
       "link": "https://fenicio.io/",
